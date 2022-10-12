@@ -1,0 +1,40 @@
+{
+  "name": "danoice-limited-apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:docs": "apidoc -i -o docs/apidoc",
+    "lint": "npx eslint **/**/*.js",
+    "lint:files": "npx eslint **/**/*.js | grep -E '^[\\w/].*\\.js'",
+    "lint:files:open": "code $(npx eslint **/**/*.js | grep -E '^[\\w/].*\\.js')",
+    "prettier": "npx prettier --write **/**/*.js"
+  },
+  "keywords": [],
+  "author": "Daniel Ozeh hello@danielozeh.com.ng",
+  "license": "ISC",
+  "dependencies": {
+    "amqp-connection-manager": "^4.1.6",
+    "amqplib": "^0.10.3",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.31.0",
+    "connect-busboy": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "helmet": "^6.0.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.6.1",
+    "mongoose-aggregate-paginate-v2": "^1.0.6",
+    "mongoose-paginate-v2": "^1.7.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
